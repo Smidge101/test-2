@@ -1,0 +1,20 @@
+name: Python CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-in-container:
+    runs-on: ubuntu-latest
+    container:
+      image: lgcodes121/lau_img:v2
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Run tests
+        run: pytest
