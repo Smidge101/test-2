@@ -1,3 +1,5 @@
+import pytest
+from main import EngagementEngine
 # Test 1 🧪 1. Initialization Tests
 def test_initialization_defaults():
     engine = EngagementEngine("user1")
